@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e23e003b-2cf3-44a7-997d-a09b43b9671d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/css/index/cssIndex.css" afterPath="$PROJECT_DIR$/css/index/cssIndex.css" />
       <change beforePath="$PROJECT_DIR$/scripts/indexScripts/click.js" afterPath="$PROJECT_DIR$/scripts/indexScripts/click.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="106" column="82" lean-forward="true" selection-start-line="106" selection-start-column="82" selection-end-line="106" selection-end-column="82" />
+            <state relative-caret-position="273">
+              <caret line="103" column="35" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -31,8 +30,8 @@
       <file leaf-file-name="click.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/indexScripts/click.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+            <state relative-caret-position="238">
+              <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
               <folding />
             </state>
           </provider>
@@ -269,7 +268,7 @@
       <workItem from="1519494906061" duration="705000" />
       <workItem from="1519553591500" duration="13670000" />
       <workItem from="1519592232376" duration="2490000" />
-      <workItem from="1519632014430" duration="8316000" />
+      <workItem from="1519632014430" duration="11954000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1519594869708</created>
@@ -299,11 +298,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519636922422</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="List done">
+      <created>1519640943132</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519640943132</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110685000" />
+    <option name="totallyTimeSpent" value="114323000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -391,7 +397,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="commit" />
     <MESSAGE value="Dom tree" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dom tree" />
+    <MESSAGE value="List done" />
+    <option name="LAST_COMMIT_MESSAGE" value="List done" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -798,16 +805,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="106" column="82" lean-forward="true" selection-start-line="106" selection-start-column="82" selection-end-line="106" selection-end-column="82" />
+        <state relative-caret-position="273">
+          <caret line="103" column="35" lean-forward="false" selection-start-line="103" selection-start-column="24" selection-end-line="103" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/indexScripts/click.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="3" lean-forward="false" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+        <state relative-caret-position="238">
+          <caret line="14" column="53" lean-forward="false" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
           <folding />
         </state>
       </provider>
