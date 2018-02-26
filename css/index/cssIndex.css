@@ -79,4 +79,7 @@ h2{
     margin: 0 1em;
     padding: 0;
 }
+.doneItemListBtn{
+    visibility: hidden;
+}
 .row-eq-height { margin-bottom: 0;}
