@@ -1,7 +1,3 @@
-/*navigation*/
-body{
-    color: white;
-}
 @media (max-width: 998px) {
     .navbar-header {
         float: none;
@@ -74,89 +70,6 @@ a:visited { text-decoration: none; }
 .navbar-default .container-fluid{
     border-radius: 0;
 }
-
-/*colors*/
-.redBack{
-    background-color: #e84c3d;
-}
-.white{
-    color: #fff;
-}
-/*Jumbotron*/
-.jumbotron{
-    margin-bottom: 0;
-    padding-left: 1.5em;
-    display: flex;
-    background: url("../images/Titlepict.jpg") center;
-    color: white;
-    height: 20em;
-    background-size: cover;
-    justify-content:flex-start;
-    align-items:center;
-}
-.jumbotron .container{
-    margin-left: 2em;
-}
-.jumbotron h1{
-    font-size: 2.8vw;
-    line-height: 0.4em;
-}
-h2{
-    font-size: 2.5vw;
-}
-/*Carousels*/
-#categoriesCarousel{
-    padding: 1em 1em;
-    background-color: #95989A;
-}
-.categorieesC img{
-    width: 280px;
-    height: 190px;
-}
-.categorieesC{
-    text-align: center;
-    font-size: 1.5em;
-    background-color: #e84c3d;
-}
-/*List*/
-.list{
-    margin-right: 0;
-    padding-right: 0;
-    position: relative;
-}
-.listInfo{
-    position: absolute;
-    margin: 0;
-    height: 100%;
-}
-.addList{
-    padding: 0;
-    float: right;
-}
-.searhcList{
-    height: 3em;
-}
-.productForm{
-    padding: 0 2em;
-    min-height: 21em;
-    height: auto;
-}
-#productList{
-    color: black;
-}
-.itemList{
- padding: 0 0.5em;
-}
-.btn-remove{
-    align-content: center;
-    height: 1.5em;
-    width: 1.5em;
-    border-radius: 100%;
-    margin: 0 1em;
-    padding: 0;
-}
-.row-eq-height { margin-bottom: 0;}
-
 
 .footer{
     height: auto;
