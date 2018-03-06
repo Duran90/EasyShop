@@ -14,7 +14,7 @@
     <script src="owlcarousel/owl.carousel.min.js"></script>
     <script src="scripts/indexScripts/owlCar.js"></script>
     <script src="scripts/indexScripts/click.js"></script>
-    <script src="scripts/indexScripts/search.js"></script>
+    <script src="scripts/indexScripts/ajaxRequestResponse.js"></script>
 
 
     <!--Style-->
@@ -72,68 +72,75 @@
     </div>
 </section>
 
-    <!--TODO Carousel-->
-    <div id="sharesCarousel" class="owl-carousel owl-theme">
-        <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_2@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_2@2x.png"></a>
-        <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
+<!--TODO Carousel-->
+<div id="sharesCarousel" class="owl-carousel owl-theme">
+    <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_2@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_2@2x.png"></a>
+    <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
+</div>
+<!--TODO list-->
+<div class="container-fluid row list">
+    <div class="listInfo col-xs-4 col-md-3 text-left whiteText redBackground">
+        <h2><strong>CREATE</strong> YOUR SHOPPING LIST</h2>
     </div>
-    <!--TODO list-->
-    <div class="container-fluid row list">
-        <div class="listInfo col-xs-4 col-md-3 text-left whiteText redBackground">
-            <h2><strong>CREATE</strong> YOUR SHOPPING LIST</h2>
-        </div>
-        <div class=" col-xs-8 col-md-9 addList">
-            <div class=" col-xs-12 col-md-12 searhcList whiteText">
-                <form method="get" action="#" role="search">
-                    <div class="input-group">
-                        <input id="inputItemInList" type="text" class="form-control" placeholder="Enter name of goods">
-                        <div class="input-group-btn">
-                            <button id="addItemInListBtn" class="btn btn-default redBackground whiteText" type="button">
-                                <i class="glyphicon glyphicon-ok whiteText"></i>
-                            </button>
-                        </div>
-                    </div>
-                </form>
-                <div id="searchResponse"></div>
-            </div>
-            <div class="col-xs-12 col-md-12 productForm whiteText">
-                <ol id="productList">
+    <div class=" col-xs-8 col-md-9 addList">
+        <div class=" col-xs-12 col-md-12 searhcList whiteText">
+            <form method="get" action="#" role="search">
+                <div class="input-group">
+                    <input id="inputItemInList" type="text" list="searchResponse" class="form-control"
+                           placeholder="Enter name of goods" autocomplete="off">
 
-                </ol>
-                <button id="doneItemListBtn" type="button" value="Done" class="btn redBackground pull-right">Done</button>
-            </div>
+                    <input id="inputItemAmount" class="form-control" type="number" autocomplete="off" min="1"
+                           placeholder="Enter amount">
+
+                    <div class="input-group-btn">
+                        <button id="addItemInListBtn" class="btn btn-default redBackground whiteText" type="button">
+                            <i class="glyphicon glyphicon-ok whiteText"></i>
+                        </button>
+                    </div>
+                    <datalist id="searchResponse">
+                        <option class="selectItem" value="one">1</option>
+                        <option class="selectItem" value="one">1</option>
+                    </datalist>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-12 col-md-12 productForm whiteText">
+            <ol id="productList">
+            </ol>
+            <button id="doneItemListBtn" type="button" value="Done" class="btn redBackground pull-right">Done</button>
         </div>
     </div>
-    <!--TODO Carousel-->
-    <div id="categoriesCarousel" class="owl-carousel owl-theme">
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/aclco.jpg"><span>Drinks</span></div>
-        </a>
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/baco.jpg"><span>Groceries</span></div>
-        </a>
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/frozen%20vegetables.jpg"><span>Frozen Goods</span></div>
-        </a>
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/bakedGoods.jpg"><span>Baked Goods</span></div>
-        </a>
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/milkFood.jpg"><span>Milk Food</span></div>
-        </a>
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/baco.jpg"><span>Groceries</span></div>
-        </a>
-        <a class="item" href="#">
-            <div class="categorieesC"><img src="images/indexImg/baco.jpg"><span>Groceries</span></div>
-        </a>
-    </div>
+</div>
+<!--TODO Carousel-->
+<div id="categoriesCarousel" class="owl-carousel owl-theme">
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/aclco.jpg"><span>Drinks</span></div>
+    </a>
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/baco.jpg"><span>Groceries</span></div>
+    </a>
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/frozen%20vegetables.jpg"><span>Frozen Goods</span></div>
+    </a>
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/bakedGoods.jpg"><span>Baked Goods</span></div>
+    </a>
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/milkFood.jpg"><span>Milk Food</span></div>
+    </a>
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/baco.jpg"><span>Groceries</span></div>
+    </a>
+    <a class="item" href="#">
+        <div class="categorieesC"><img src="images/indexImg/baco.jpg"><span>Groceries</span></div>
+    </a>
+</div>
 
 <footer class="redBackground whiteText">
     <div class="container-fluid row">

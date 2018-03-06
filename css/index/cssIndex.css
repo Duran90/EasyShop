@@ -67,6 +67,11 @@ h2 {
     padding: 0;
     float: right;
 }
+#addItemInListBtn{
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-color: #e84c3d;
+}
 
 .searhcList {
     height: 3em;
@@ -79,28 +84,25 @@ h2 {
 }
 
 #productList {
+    width: 80%;
     color: black;
+    overflow-x: auto;
 }
 
 .itemList {
     padding: 0 0.5em;
+    margin-bottom: 0.5em;
+}
+li span{
+    margin-left: 1em;
 }
 
-#searchResponse {
-    width: 100%;
-    height: auto;
-    overflow: auto;
-    border: 1px solid rgba(214, 214, 214, 0.56);
-    border-top: none;
-    /*display: none;*/
+#inputItemAmount{
+    width: 20%;
 }
-
-#searchResponse searchItem {
-    width: 100%;
-    height: 2em;
-    background-color: #FFFFFF;
+#inputItemInList{
+    width: 80%;
 }
-
 .btn-remove {
     align-content: center;
     height: 1.5em;
