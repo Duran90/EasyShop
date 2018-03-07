@@ -20,8 +20,9 @@
     <!--Style-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index/cssIndex.css">
-    <link rel="stylesheet" href="css/index/headerFooter.css">
-    <
+    <link rel="stylesheet" href="css/headerFooter.css">
+    <!--Fonts-->
+
 </head>
 <body>
 <header>
@@ -36,7 +37,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- Бренд или название сайта (отображается в левой части меню) -->
-                <a href="#" class="navbar-brand"><img class="logo" src="images/indexImg/logo@2x.png"></a>
+                <img class="logo" src="images/indexImg/logo@2x.png">
             </div>
             <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
             <div class="collapse navbar-collapse" id="navbar-main">
@@ -47,6 +48,7 @@
                     <li><a href="#">STORES LOCATOR</a></li>
                 </ul>
                 <div class="navbar-right">
+                    <!--TODO Search-->
                     <form class="navbar-form navbar-left" role="search">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search">
@@ -72,7 +74,7 @@
     </div>
 </section>
 
-<!--TODO Carousel-->
+<!--TODO Carousel ссылки на рекламу-->
 <div id="sharesCarousel" class="owl-carousel owl-theme">
     <a class="item" href="#"><img src="images/indexImg/store_1@2x.png"></a>
     <a class="item" href="#"><img src="images/indexImg/store_3@2x.png"></a>
@@ -93,7 +95,7 @@
             <form method="get" action="#" role="search">
                 <div class="input-group">
                     <input id="inputItemInList" type="text" list="searchResponse" class="form-control"
-                           placeholder="Enter name of goods" autocomplete="off">
+                           placeholder="Enter name of goods">
 
                     <input id="inputItemAmount" class="form-control" type="number" autocomplete="off" min="1"
                            placeholder="Enter amount">
@@ -117,7 +119,7 @@
         </div>
     </div>
 </div>
-<!--TODO Carousel-->
+<!--TODO Carousel подключить ссылки на каталог-->
 <div id="categoriesCarousel" class="owl-carousel owl-theme">
     <a class="item" href="#">
         <div class="categorieesC"><img src="images/indexImg/aclco.jpg"><span>Drinks</span></div>
@@ -148,6 +150,7 @@
             <img src="images/indexImg/logo.png">
             <p><i class="far fa-copyright"></i>Dream Team2018</p>
         </div>
+        <!--TODO сделать ссылки на страницы-->
         <div class="col-xs-12 col-md-2 footer">
             <ul class="ulFooter">
                 <li><a href="#">About Us</a></li>
@@ -155,6 +158,7 @@
             </ul>
         </div>
         <div class="col-xs-12 col-md-2 footer teex-left">
+            <!--TODO сделать ссылки на соц.сети-->
             <ul class="ulFooter">
                 <li><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></li>
                 <li><a href="#"><i class="fab fa-twitter-square"></i>Twitter</a></li>
@@ -165,10 +169,11 @@
             <p>Subscript to our newsletter:</p>
             <form class="navbar-form navbar-left" action="#">
                 <div class="input-group">
+                    <!--TODO Отправка на сервер EMAIL-->
                     <input type="email" class="form-control whiteText" placeholder="Email Address">
                     <div class="input-group-btn">
                         <button class="btn btn-default redBackground" type="submit">
-                            <i class="fas fa-search whiteText"></i>
+                            <i class="far fa-envelope whiteText"></i>
                         </button>
                     </div>
                 </div>

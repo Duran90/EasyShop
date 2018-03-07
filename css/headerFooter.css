@@ -45,7 +45,7 @@
     padding: 0 1em;
 }
 .logo{
-    margin: 0.5em auto;
+    margin: 0.5em 0 0 0.5em;
 }
 a:visited { text-decoration: none; }
 .navbar-default .navbar-nav>li>a, footer a,#categoriesCarousel a{ /*redefinition bootstap*/

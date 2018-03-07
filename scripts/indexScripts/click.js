@@ -1,5 +1,4 @@
 $(document).ready(function(){
-    console.log("Done");
    $("#addItemInListBtn").click(function () {
        var item = $("#inputItemInList");
        var amount = $("#inputItemAmount");

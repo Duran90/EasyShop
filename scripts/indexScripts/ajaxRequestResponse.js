@@ -1,23 +1,27 @@
-var BASE_URL = "/https://easyshoptelran.herokuapp.com/user";
+var BASE_URL = "https://easyshoptelran.herokuapp.com/user";
 $(document).ready(function () {
-    BASE_URL + "/itemSearch?search=" + search
+
     var searchElement = $('#inputItemInList');
-    var search = searchElement.val();
+
     searchElement.keyup(function () {
-        if (search.length > 3) {
-            $.ajax({url: BASE_URL + "/itemSearch?search=" + search}).then(function (response) {
-                if (response.code == 200){
-                    for(var key in response){
-                        $("#searchResponse").append("<option value=\'"+response[key]+"\'></option>");
+
+            if(searchElement.val().length >3) {
+                $.ajax({url: BASE_URL + "/itemsearch?search=" + searchElement.val()}).then(function (response) {
+                    for (var key in response) {
+                        if (key === "result") {
+                            $("#searchResponse").children().remove();
+                            var res = response[key];
+                            for (var item in res)
+                                $("#searchResponse").append("<option value=\'" + res[item] + "\'></option>");
+                        }
                     }
-                }
+                });
 
-            });
-        }
-        })
+            }
+    });
 
-    $("#doneItemListBtn").click(function () {
-        $.ajax()
-    })
+    // $("#doneItemListBtn").click(function () {
+    //     $.ajax()
+    // })
 });
 
