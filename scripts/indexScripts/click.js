@@ -6,11 +6,19 @@ $(document).ready(function () {
         if (amount.val() == "") {
             alert("Enter Amount")
         } else if (!item.val() == "") {
-            $("#productList").append('<li class="itemList" data-amount = \"' + amount.val() + '\" data-value=\"' + item.val() + '\">' + item.val() +
+            var code;
+            for(var bla in index){
+                if(bla == item.val()){
+                    code = index[bla];
+                }
+            }
+            console.log(barcode);
+            $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\"+ data-amount = \"' + amount.val() + '\" data-value=\"' + item.val() + '\">' + item.val() +
                 '<span>' + amount.val() + '</span>' + ' qty' +
                 '<sup><button class="btn-remove redBackground whiteText" type="button" value="remove">X</button></sup></li>');
             item.val('');
             amount.val('');
+
 
         } else {
             alert("Enter the name of the product!")
@@ -29,12 +37,17 @@ $(document).ready(function () {
     $("#doneItemListBtn").click(function () {
         let itemsList = $(".itemList");
         let items = {};
-        let name;
+        let barcode;
         let amount;
+        let name;
         for (let i = 0; i < itemsList.length; i++) {
-            name = itemsList[i].dataset.value;
+            barcode = itemsList[i].dataset.barcode;
             amount = itemsList[i].dataset.amount;
-            items[name] = amount;
+            name = itemsList[i].dataset.value;
+            items[barcode] = {
+                amount:amount,
+                name:name
+            };
         }
         recuestJson = {
             location: {
