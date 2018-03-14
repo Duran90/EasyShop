@@ -7,7 +7,7 @@ $(document).ready(function () {
 
     searchElement.keyup(function () {
 
-            if(searchElement.val().length >3) {
+            if(searchElement.val().length >2) {
                 $.ajax({url: BASE_URL + "/itemsearch?search=" + searchElement.val()}).then(function (response) {
                     for (var key in response) {
                         if (key === "result") {

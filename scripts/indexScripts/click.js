@@ -12,8 +12,7 @@ $(document).ready(function () {
                     code = index[bla];
                 }
             }
-            console.log(barcode);
-            $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\"+ data-amount = \"' + amount.val() + '\" data-value=\"' + item.val() + '\">' + item.val() +
+            $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount.val() + '\" data-value=\"' + item.val() + '\">' + item.val() +
                 '<span>' + amount.val() + '</span>' + ' qty' +
                 '<sup><button class="btn-remove redBackground whiteText" type="button" value="remove">X</button></sup></li>');
             item.val('');

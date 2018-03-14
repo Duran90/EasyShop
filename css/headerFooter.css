@@ -37,9 +37,13 @@
         margin-right: -15px;
         margin-left: -15px;
     }
+    .navbar label{
+        margin-left: 1em;
+    }
 }
 .navbar{
     border: none;
+  vertical-align: center;
 }
 .navbar-brand{
     padding: 0 1em;
@@ -86,4 +90,7 @@ footer div{
 footer p{
     margin: 0;
     padding-left: 1em;
+}
+#selectCity{
+    margin-top: 1em;
 }

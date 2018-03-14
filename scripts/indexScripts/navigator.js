@@ -14,6 +14,7 @@ function errorMessages(error) {
         //заперт на использование геолокации
         case error.PERMISSION_DENIED:
             alert("You have refused to provide your location. Our application may not work correctly!");
+            //TODO
             break;
         //ошибка определения координат(в основнов в неподдерживаемых браузерах)
         case error.POSITION_UNAVAILABLE:

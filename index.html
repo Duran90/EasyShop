@@ -16,6 +16,7 @@
     <script src="scripts/indexScripts/click.js"></script>
     <script src="scripts/indexScripts/ajaxRequestResponse.js"></script>
     <script src="scripts/indexScripts/navigator.js"></script>
+    <script src="scripts/indexScripts/ajaxCity.js"></script>
 
 
     <!--Style-->
@@ -49,18 +50,23 @@
                     <li><a href="map.html">STORES LOCATOR</a></li>
                 </ul>
                 <div class="navbar-right">
+                  <label for="selectCity" class="whiteText">CITY: </label>
+                    <select id="selectCity" class="redBackground whiteText">
+                        <option value="Spb">Select City</option>
+
+                    </select>
                     <!--&lt;!&ndash;TODO Search&ndash;&gt;-->
                     <!--<form class="navbar-form navbar-left" role="search">-->
-                        <!--<div class="input-group">-->
-                            <!--<input type="text" class="form-control" placeholder="Search">-->
-                            <!--<div class="input-group-btn">-->
-                                <!--<button class="btn btn-default redBackground whiteText" type="submit">-->
-                                    <!--<i class="glyphicon glyphicon-search whiteText"></i>-->
-                                <!--</button>-->
-                            <!--</div>-->
-                        <!--</div>-->
+                    <!--<div class="input-group">-->
+                    <!--<input type="text" class="form-control" placeholder="Search">-->
+                    <!--<div class="input-group-btn">-->
+                    <!--<button class="btn btn-default redBackground whiteText" type="submit">-->
+                    <!--<i class="glyphicon glyphicon-search whiteText"></i>-->
+                    <!--</button>-->
+                    <!--</div>-->
+                    <!--</div>-->
                     <!--</form>-->
-                    <button type="button" class="btn btn-default navbar-btn redBackground whiteText">Enter</button>
+                    <!--<button type="button" class="btn btn-default navbar-btn redBackground whiteText">Enter</button>-->
                 </div>
             </div>
         </div>
@@ -71,7 +77,7 @@
     <div class="text-left">
         <h1><strong>SELECT</strong> ALL THE PRODUCTS YOU NEED</h1>
         <h1><strong>ADD</strong> TO YOUR SHOPPING CART</h1>
-        <h1><strong>GET</strong> THE LOWEST PRIES</h1>
+        <h1><strong>GET</strong> THE LOWEST PRICE</h1>
     </div>
 </section>
 
@@ -117,7 +123,9 @@
             <ol id="productList">
             </ol>
             <!--TODO Переход в корзину-->
-            <button id="doneItemListBtn" type="button" value="Done"  class="btn redBackground pull-right" onclick="location.href='#'">Done</button>
+            <button id="doneItemListBtn" type="button" value="Done" class="btn redBackground pull-right"
+                    onclick="location.href='#'">Done
+            </button>
         </div>
     </div>
 </div>
@@ -164,7 +172,7 @@
             <ul class="ulFooter">
                 <li><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></li>
                 <li><a href="#"><i class="fab fa-twitter-square"></i>Twitter</a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i>Iinstagram</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
             </ul>
         </div>
         <div class="col-xs-12 col-md-3 footer">
