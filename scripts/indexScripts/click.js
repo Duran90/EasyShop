@@ -1,5 +1,6 @@
-var recuestJson;
+var requestJson;
 $(document).ready(function () {
+
 
     $("#addItemInListBtn").click(function () {
         let item = $("#inputItemInList");
@@ -34,8 +35,9 @@ $(document).ready(function () {
             }
         })
     });
+
     $("#createItemListBtn").click(function () {
-       localStorage.removeItem("recuest");
+       sessionStorage.removeItem("request");
         $("#productList").children().remove();
         $("#doneItemListBtn,#createItemListBtn").hide();
     });
@@ -59,7 +61,7 @@ $(document).ready(function () {
             latitude = $("#selectCity option:selected").get(0).dataset.latitude;
             longitude = $("#selectCity option:selected").get(0).dataset.longitude;
         }
-        recuestJson = {
+        requestJson = {
             location: {
                 lng: longitude,
                 lat: latitude
@@ -67,8 +69,8 @@ $(document).ready(function () {
             radius: 2.0,
             items
         };
-        recuestJson = JSON.stringify(recuestJson);
-        localStorage.setItem("recuest", recuestJson);
+        requestJson = JSON.stringify(requestJson);
+        sessionStorage.setItem("request", requestJson);
 
     });
 
