@@ -1,5 +1,6 @@
-var recuestJson = {};
+var recuestJson;
 $(document).ready(function () {
+
     $("#addItemInListBtn").click(function () {
         let item = $("#inputItemInList");
         let amount = $("#inputItemAmount");
@@ -7,8 +8,8 @@ $(document).ready(function () {
             alert("Enter Amount")
         } else if (!item.val() == "") {
             var code;
-            for(var bla in index){
-                if(bla == item.val()){
+            for (var bla in index) {
+                if (bla == item.val()) {
                     code = index[bla];
                 }
             }
@@ -23,15 +24,20 @@ $(document).ready(function () {
             alert("Enter the name of the product!")
         }
         if ($("#productList").children().length > 0) {
-            $("#doneItemListBtn").show();
+            $("#doneItemListBtn,#createItemListBtn").show();
         }
 
         $(".btn-remove").click(function () {
             $(this).parents(".itemList").remove();
             if ($("#productList").children().length <= 0) {
-                $("#doneItemListBtn").hide();
+                $("#doneItemListBtn,#createItemListBtn").hide();
             }
         })
+    });
+    $("#createItemListBtn").click(function () {
+       localStorage.removeItem("recuest");
+        $("#productList").children().remove();
+        $("#doneItemListBtn,#createItemListBtn").hide();
     });
     $("#doneItemListBtn").click(function () {
         let itemsList = $(".itemList");
@@ -39,14 +45,19 @@ $(document).ready(function () {
         let barcode;
         let amount;
         let name;
+
         for (let i = 0; i < itemsList.length; i++) {
             barcode = itemsList[i].dataset.barcode;
             amount = itemsList[i].dataset.amount;
             name = itemsList[i].dataset.value;
             items[barcode] = {
-                amount:amount,
-                name:name
+                amount: amount,
+                name: name
             };
+        }
+        if (permissionNav == false) {
+            latitude = $("#selectCity option:selected").get(0).dataset.latitude;
+            longitude = $("#selectCity option:selected").get(0).dataset.longitude;
         }
         recuestJson = {
             location: {
@@ -56,6 +67,10 @@ $(document).ready(function () {
             radius: 2.0,
             items
         };
-    })
+        recuestJson = JSON.stringify(recuestJson);
+        localStorage.setItem("recuest", recuestJson);
+
+    });
+
 
 });

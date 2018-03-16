@@ -1,5 +1,6 @@
 var latitude;
 var longitude;
+var permissionNav = true;
 $(document).ready(function () {
     navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
 });
@@ -15,6 +16,8 @@ function errorMessages(error) {
         case error.PERMISSION_DENIED:
             alert("You have refused to provide your location. Our application may not work correctly!");
             //TODO
+            permissionNav = false;
+
             break;
         //ошибка определения координат(в основнов в неподдерживаемых браузерах)
         case error.POSITION_UNAVAILABLE:

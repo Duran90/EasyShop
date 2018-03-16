@@ -81,6 +81,7 @@ h2 {
     padding: 0 2em;
     min-height: 21em;
     height: auto;
+    padding: 0 1em;
 }
 
 #productList {
@@ -112,7 +113,7 @@ li span{
     padding: 0;
 }
 
-#doneItemListBtn {
+#doneItemListBtn, #createItemListBtn {
     display: none;
     margin-bottom: 1em;
 }

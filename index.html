@@ -17,6 +17,7 @@
     <script src="scripts/indexScripts/ajaxRequestResponse.js"></script>
     <script src="scripts/indexScripts/navigator.js"></script>
     <script src="scripts/indexScripts/ajaxCity.js"></script>
+    <script src="scripts/indexScripts/localStorage.js"></script>
 
 
     <!--Style-->
@@ -52,7 +53,7 @@
                 <div class="navbar-right">
                   <label for="selectCity" class="whiteText">CITY: </label>
                     <select id="selectCity" class="redBackground whiteText">
-                        <option value="Spb">Select City</option>
+                        <option class="citys" value="none">Select City</option>
 
                     </select>
                     <!--&lt;!&ndash;TODO Search&ndash;&gt;-->
@@ -123,8 +124,12 @@
             <ol id="productList">
             </ol>
             <!--TODO Переход в корзину-->
+
             <button id="doneItemListBtn" type="button" value="Done" class="btn redBackground pull-right"
                     onclick="location.href='#'">Done
+            </button>
+            <button id="createItemListBtn" type="button" value="Create" class="btn redBackground pull-right"
+                    onclick="location.href='#'">Create
             </button>
         </div>
     </div>
@@ -156,18 +161,18 @@
 
 <footer class="redBackground whiteText">
     <div class="container-fluid row">
-        <div class="col-xs-12 col-md-2 footer teex-left">
+        <div class="col-xs-4 col-md-2 footer teex-left">
             <img src="images/indexImg/logo.png">
             <p><i class="far fa-copyright"></i>Dream Team2018</p>
         </div>
         <!--TODO сделать ссылки на страницы-->
-        <div class="col-xs-12 col-md-2 footer">
+        <div class="col-xs-4 col-md-2 footer">
             <ul class="ulFooter">
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-md-2 footer teex-left">
+        <div class="col-xs-4 col-md-2 footer teex-left">
             <!--TODO сделать ссылки на соц.сети-->
             <ul class="ulFooter">
                 <li><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></li>
@@ -175,7 +180,7 @@
                 <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-md-3 footer">
+        <div class="col-xs-8 col-md-3 footer">
             <p>Subscript to our newsletter:</p>
             <form class="navbar-form navbar-left" action="#">
                 <div class="input-group">
@@ -189,7 +194,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-xs-12 col-md-3 footer">
+        <div class="col-xs-4 col-md-3 footer">
             <p>Plaut 10, Rehovot</p>
             <!--TODO Email easyshop-->
             <p>+972586688567</p>
