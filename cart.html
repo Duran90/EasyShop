@@ -2,9 +2,292 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Easy Shop</title>
+
+    <!--Bootstrap & Jquery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script defer src="scripts/cartScripts/cart.js"></script>
+    <script src="scripts/indexScripts/click.js"></script>
+    <script src="scripts/indexScripts/ajaxRequestResponse.js"></script>
+
+
+    <!--Style-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index/cssIndex.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
+    <link rel="stylesheet" href="css/cart/cart.css">
+    <link rel="stylesheet" href="css/cart/onnoffswitch.css">
+
+    <!--Semantic-UI-->
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
+
 </head>
 <body>
+<header>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-expand-jg redBackground">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!-- Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar) -->
+                <button type="button" class="navbar-toggle collapsed redBackground whiteText" data-toggle="collapse"
+                        data-target="#navbar-main">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- Бренд или название сайта (отображается в левой части меню) -->
+                <a href="#" class="navbar-brand"><img class="logo" src="images/indexImg/logo@2x.png"></a>
+            </div>
+            <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
+            <div class="collapse navbar-collapse" id="navbar-main">
+                <!-- Содержимое основной части -->
+                <ul class="nav navbar-nav">
+                    <li><a href="#">CATALOGUE</a></li>
+                    <li><a href="#">SHOPPING CART</a></li>
+                    <li><a href="#">STORES LOCATOR</a></li>
+                </ul>
+                <div class="navbar-right">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default redBackground whiteText" type="submit">
+                                    <i class="glyphicon glyphicon-search whiteText"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <button type="button" class="btn btn-default navbar-btn redBackground whiteText">Enter</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
 
+
+<div class="row">
+    <div id="left-part-of-cart" class="col-lg-2 col-xs-12">
+        <p id="start-saving-money-now"><strong>START</strong> SAVING<br>MONEY NOW</p>
+
+        <div class="onoffswitch">
+            <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+            <label class="onoffswitch-label" for="myonoffswitch">
+                <span class="onoffswitch-inner"></span>
+                <span class="onoffswitch-switch"></span>
+            </label>
+        </div>
+
+    </div>
+    <div id="right-part-of-cart" class="col-lg-10 col-xs-12">
+        <div class="col-lg-4">
+
+            <table class="table table-striped table-bordered table-hover table-condensed">
+                <tr>
+                    <td colspan="4" class="table-center"><img src="images/indexImg/store_1@2x.png" alt="shufersal">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Items</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Bread</td>
+                    <td>2</td>
+                    <td>50</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coca-cola</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apples</td>
+                    <td>5</td>
+                    <td>25</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div class="col-lg-4">
+            <table class="table table-striped table-bordered table-hover table-condensed ">
+                <tr>
+                    <td colspan="4" class="table-center"><img src="images/indexImg/store_2@2x.png" alt="shufersal">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Items</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Bread</td>
+                    <td>2</td>
+                    <td>50</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coca-cola</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apples</td>
+                    <td>5</td>
+                    <td>25</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                <tr>
+                    <td>Bread</td>
+                    <td>2</td>
+                    <td>50</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coca-cola</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Apples</td>
+                    <td>5</td>
+                    <td>25</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+            </table>
+        </div>
+        <div class="col-lg-4">
+            <table class="table table-striped table-bordered table-hover table-condensed">
+                <tr>
+                    <td colspan="4" class="table-center"><img src="images/indexImg/store_3@2x.png" alt="shufersal">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Items</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>Bread</td>
+                    <td>2</td>
+                    <td>50</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Milk</td>
+                    <td>1</td>
+                    <td>10</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Coca-cola</td>
+                    <td>2</td>
+                    <td>15</td>
+                    <td>
+                        <button>x</button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<footer class="redBackground whiteText">
+    <div class="container-fluid row">
+        <div class="col-xs-4 col-md-2 footer teex-left">
+            <img src="images/indexImg/logo.png">
+            <p><i class="far fa-copyright"></i>Dream Team2018</p>
+        </div>
+        <div class="col-xs-4 col-md-2 footer">
+            <ul class="ulFooter">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-4 col-md-2 footer teex-left">
+            <ul class="ulFooter">
+                <li><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></li>
+                <li><a href="#"><i class="fab fa-twitter-square"></i>Twitter</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Iinstagram</a></li>
+            </ul>
+        </div>
+        <div class="col-xs-8 col-md-3 footer">
+            <p>Subscript to our newsletter:</p>
+            <form class="navbar-form navbar-left" action="#">
+                <div class="input-group">
+                    <input type="email" class="form-control whiteText" placeholder="Email Address">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default redBackground" type="submit">
+                            <i class="fas fa-search whiteText"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="col-xs-4 col-md-3 footer">
+            <p>Plaut 10, Rehovot</p>
+            <!--TODO Email easyshop-->
+            <p>+972586688567</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

@@ -1,0 +1,67 @@
+.row {
+    margin-top: 50px;
+    min-height: 80%;
+    height: 1px;
+    overflow: auto;
+
+}
+
+#left-part-of-cart {
+    min-height: 1px;
+    background-color: #e84c3d;
+    height: 100%;
+
+
+}
+
+#right-part-of-cart {
+    min-height: 1px;
+    height: 100%;
+
+}
+
+#start-saving-money-now {
+    margin: 3.5em 0 0 0;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+}
+
+.onoffswitch {
+    margin: 0 auto;
+}
+
+.shop_name {
+    text-align: center;
+}
+
+.table-center {
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    #left-part-of-cart{
+        height: 100px;
+        min-height: 22vw;
+    }
+    #start-saving-money-now {
+        margin: 0.5em 0 0 0;
+        text-align: center;
+        font-size: 4vw;
+        color: white;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    #left-part-of-cart{
+        height: 100px;
+        min-height: 22vw;
+    }
+    #start-saving-money-now {
+        margin: 0.5em 0 0 0;
+        text-align: center;
+        font-size: 4vw;
+        color: white;
+    }
+}
+

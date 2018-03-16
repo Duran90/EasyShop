@@ -69,6 +69,7 @@ $(document).ready(function () {
             radius: 2.0,
             items
         };
+        console.log(requestJson)
         requestJson = JSON.stringify(requestJson);
         sessionStorage.setItem("request", requestJson);
 

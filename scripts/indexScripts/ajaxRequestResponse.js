@@ -26,8 +26,6 @@ $(document).ready(function () {
             }
     });
 
-    // $("#doneItemListBtn").click(function () {
-    //     $.ajax()
-    // })
+
 });
 
