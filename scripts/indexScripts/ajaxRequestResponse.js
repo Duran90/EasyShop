@@ -4,11 +4,9 @@ var keyItem;
 $(document).ready(function () {
 
     var searchElement = $('#inputItemInList');
-
     searchElement.keyup(function () {
-
             if(searchElement.val().length >2) {
-                $.ajax({url: BASE_URL + "/itemsearch?search=" + searchElement.val()}).then(function (response) {
+                $.ajax({url: BASE_URL + "/itemsearch?search=" + searchElement.val().toLowerCase()}).then(function (response) {
                     for (var key in response) {
                         if (key === "result") {
                             $("#searchResponse").children().remove();
@@ -26,8 +24,6 @@ $(document).ready(function () {
             }
     });
 
-    // $("#doneItemListBtn").click(function () {
-    //     $.ajax()
-    // })
+
 });
 

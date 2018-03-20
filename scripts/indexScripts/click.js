@@ -3,23 +3,39 @@ $(document).ready(function () {
 
 
     $("#addItemInListBtn").click(function () {
-        let item = $("#inputItemInList");
-        let amount = $("#inputItemAmount");
-        if (amount.val() == "") {
+        let item = $("#inputItemInList").val();
+        let amount = $("#inputItemAmount").val();
+        if (amount == "") {
             alert("Enter Amount")
-        } else if (!item.val() == "") {
+        } else if (!item == "") {
             var code;
-            for (var bla in index) {
-                if (bla == item.val()) {
-                    code = index[bla];
+            for (var bar in index) {
+                if (bar == item) {
+                    code = index[bar];
                 }
             }
-            $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount.val() + '\" data-value=\"' + item.val() + '\">' + item.val() +
-                '<span>' + amount.val() + '</span>' + ' qty' +
-                '<sup><button class="btn-remove redBackground whiteText" type="button" value="remove">X</button></sup></li>');
-            item.val('');
-            amount.val('');
+            if ($(".itemList").length == 0) {
+                $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
+                    '<span>' + amount + '</span>' + ' qty' +
+                    '<sup><button class="btn-remove redBackground whiteText" type="button" value="remove">x</button></sup></li>');
+                $("#inputItemInList").val('');
+                $("#inputItemAmount").val('');
+            }
+            else {
+                for (let i = 0; i < $(".itemList").length; i++) {
+                    if ($(".itemList").get(i).dataset.value == item) {
+                        var doubleAmount = $(".itemList").get(i).dataset.amount;
+                        amount = +amount + +doubleAmount;
+                        $(".itemList").get(i).remove();
+                    }
+                }
 
+                $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
+                    '<span>' + amount + '</span>' + ' qty' +
+                    '<sup><button class="btn-remove redBackground whiteText" type="button" value="remove">x</button></sup></li>');
+                $("#inputItemInList").val('');
+                $("#inputItemAmount").val('');
+            }
 
         } else {
             alert("Enter the name of the product!")
@@ -37,7 +53,7 @@ $(document).ready(function () {
     });
 
     $("#createItemListBtn").click(function () {
-       sessionStorage.removeItem("request");
+        sessionStorage.removeItem("request");
         $("#productList").children().remove();
         $("#doneItemListBtn,#createItemListBtn").hide();
     });
@@ -69,6 +85,7 @@ $(document).ready(function () {
             radius: 2.0,
             items
         };
+        console.log(requestJson)
         requestJson = JSON.stringify(requestJson);
         sessionStorage.setItem("request", requestJson);
 
