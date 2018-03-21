@@ -3,6 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Map</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="scripts/mapScript/ajaxMap.js"></script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y&callback=initMap">
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/map/cssMap.css">
+    <link rel="stylesheet" href="css/headerFooter.css">
 </head>
 <body>
 <header>
@@ -25,9 +37,14 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#">CATALOGUE</a></li>
                     <li><a href="#">SHOPPING CART</a></li>
-                    <li><a href="#">STORES LOCATOR</a></li>
+                    <li><a href="map.html">STORES LOCATOR</a></li>
                 </ul>
                 <div class="navbar-right">
+                    <label for="selectCity" class="whiteText">CITY: </label>
+                    <select id="selectCity" class="redBackground whiteText">
+                        <option class="citys" value="none">Select City</option>
+
+                    </select>
                     <!--&lt;!&ndash;TODO Search&ndash;&gt;-->
                     <!--<form class="navbar-form navbar-left" role="search">-->
                     <!--<div class="input-group">-->
@@ -39,36 +56,45 @@
                     <!--</div>-->
                     <!--</div>-->
                     <!--</form>-->
-                    <button type="button" class="btn btn-default navbar-btn redBackground whiteText">Enter</button>
+                    <!--<button type="button" class="btn btn-default navbar-btn redBackground whiteText">Enter</button>-->
                 </div>
             </div>
         </div>
     </nav>
 </header>
 
+<div id="main" class="container-fluid row">
+    <div class="col-xs-4 col-md-3 text-left whiteText redBackground" id="mapFilter">
+        <h1>Filters</h1>
+    </div>
+    <div id="map" class="col-xs-8 col-md-9">
+
+    </div>
+</div>
+
 
 <footer class="redBackground whiteText">
     <div class="container-fluid row">
-        <div class="col-xs-12 col-md-2 footer teex-left">
+        <div class="col-xs-4 col-md-2 footer teex-left">
             <img src="images/indexImg/logo.png">
             <p><i class="far fa-copyright"></i>Dream Team2018</p>
         </div>
         <!--TODO сделать ссылки на страницы-->
-        <div class="col-xs-12 col-md-2 footer">
+        <div class="col-xs-4 col-md-2 footer">
             <ul class="ulFooter">
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-md-2 footer teex-left">
+        <div class="col-xs-4 col-md-2 footer teex-left">
             <!--TODO сделать ссылки на соц.сети-->
             <ul class="ulFooter">
                 <li><a href="#"><i class="fab fa-facebook-square"></i>Facebook</a></li>
                 <li><a href="#"><i class="fab fa-twitter-square"></i>Twitter</a></li>
-                <li><a href="#"><i class="fab fa-instagram"></i>Iinstagram</a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i>Instagram</a></li>
             </ul>
         </div>
-        <div class="col-xs-12 col-md-3 footer">
+        <div class="col-xs-8 col-md-3 footer">
             <p>Subscript to our newsletter:</p>
             <form class="navbar-form navbar-left" action="#">
                 <div class="input-group">
@@ -82,7 +108,7 @@
                 </div>
             </form>
         </div>
-        <div class="col-xs-12 col-md-3 footer">
+        <div class="col-xs-4 col-md-3 footer">
             <p>Plaut 10, Rehovot</p>
             <!--TODO Email easyshop-->
             <p>+972586688567</p>

@@ -1,0 +1,25 @@
+
+#main {
+    margin-top: 50px;
+    height: 90vh;
+
+}
+
+.redBackground {
+    background-color: #e84c3d;
+}
+
+.whiteText {
+    color: #fff;
+}
+
+#map, #mapFilter {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
