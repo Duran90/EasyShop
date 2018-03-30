@@ -20,6 +20,30 @@
 
 }
 
+#economy{
+    display: inline-block;
+    margin-top: 1vw;
+    margin-right: 10px;
+}
+
+table{
+    width: 30%;
+}
+
+
+th {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: 800;
+}
+
+.totalPriceRow{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+
+}
+
 #start-saving-money-now {
     margin: 3.5em 0 0 0;
     text-align: center;
