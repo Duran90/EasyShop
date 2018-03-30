@@ -1,10 +1,8 @@
 var latitude;
 var longitude;
-$(document).ready(function () {
-    navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
 
+navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
 
-});
 
 function coordinates(position) {
     latitude = position.coords.latitude;
