@@ -1,7 +1,15 @@
-var map;
+
 function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        center: {lat: -34.397, lng: 150.644},
-        zoom: 8
+var coord={lat: latitude, lng: longitude};
+    console.log("lat"+latitude+" "+"lng "+ longitude);
+    var map = new google.maps.Map(document.getElementById('map'), {
+        center: coord,
+        zoom: 15
     });
+    var marker =new google.maps.Marker({
+        position: coord,
+        map: map,
+        draggable:true
+    })
+    
 }

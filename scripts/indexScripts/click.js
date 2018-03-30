@@ -1,6 +1,6 @@
 var requestJson;
 $(document).ready(function () {
-
+    console.log(latitude+" "+longitude)
 
     $("#addItemInListBtn").click(function () {
         let item = $("#inputItemInList").val();
@@ -73,10 +73,7 @@ $(document).ready(function () {
                 name: name
             };
         }
-        if (permissionNav == false) {
-            latitude = $("#selectCity option:selected").get(0).dataset.latitude;
-            longitude = $("#selectCity option:selected").get(0).dataset.longitude;
-        }
+
         requestJson = {
             location: {
                 lng: longitude,
@@ -85,7 +82,7 @@ $(document).ready(function () {
             radius: 2.0,
             items
         };
-        console.log(requestJson)
+        console.log(requestJson);
         requestJson = JSON.stringify(requestJson);
         sessionStorage.setItem("request", requestJson);
 

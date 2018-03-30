@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Map</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-    <script src="scripts/mapScript/ajaxMap.js"></script>
+    <script defer src="scripts/indexScripts/navigator.js"></script>
+    <script defer src="scripts/mapScript/ajaxMap.js"></script>
+    <script defer src="scripts/indexScripts/ajaxCity.js"></script>
 
-    <script async defer
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y&callback=initMap">
+    <script defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y">
     </script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -29,21 +31,20 @@
                     <span class="icon-bar"></span>
                 </button>
                 <!-- Бренд или название сайта (отображается в левой части меню) -->
-                <img class="logo" src="images/indexImg/logo@2x.png">
+                <a href="index.html"><img class="logo" src="images/indexImg/logo@2x.png"></a>
             </div>
             <!-- Основная часть меню (может содержать ссылки, формы и другие элементы) -->
             <div class="collapse navbar-collapse" id="navbar-main">
                 <!-- Содержимое основной части -->
                 <ul class="nav navbar-nav">
                     <li><a href="#">CATALOGUE</a></li>
-                    <li><a href="#">SHOPPING CART</a></li>
+                    <li><a href="cart.html">SHOPPING CART</a></li>
                     <li><a href="map.html">STORES LOCATOR</a></li>
                 </ul>
                 <div class="navbar-right">
                     <label for="selectCity" class="whiteText">CITY: </label>
                     <select id="selectCity" class="redBackground whiteText">
                         <option class="citys" value="none">Select City</option>
-
                     </select>
                     <!--&lt;!&ndash;TODO Search&ndash;&gt;-->
                     <!--<form class="navbar-form navbar-left" role="search">-->
