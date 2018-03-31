@@ -6,10 +6,10 @@ function initMapCart() {
         center: coord,
         zoom: 15
     });
+
     var marker =new google.maps.Marker({
         position: coord,
         map: map,
         draggable:true
-    })
-
+    });
 }
