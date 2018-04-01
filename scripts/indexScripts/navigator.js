@@ -1,5 +1,7 @@
 var latitude;
 var longitude;
+var docity;
+var geoPosition;
 $(document).ready(function () {
 
     navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
@@ -10,15 +12,20 @@ $(document).ready(function () {
 function coordinates(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
-    var geoPosition = {
-        location: {
-            lng: longitude,
-            lat: latitude
-        }
-    };
-    geoPosition = JSON.stringify(geoPosition);
-    sessionStorage.setItem("geoData",geoPosition);
+    $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y&language=en&result_type=administrative_area_level_2")
+        .then(function (response) {
+        docity = response.results[0].address_components[0].long_name;
+        geoPosition= {
+            location: {
+                lng: longitude,
+                lat: latitude,
+                cty: docity
+            }
+        };
 
+            geoPosition = JSON.stringify(geoPosition);
+            sessionStorage.setItem("geoData",geoPosition);
+    });
 
     initMap();
     initMapCart();
@@ -34,10 +41,12 @@ function errorMessages(error) {
             $("#selectCity").change(function () {
                 latitude = $("#selectCity option:selected").get(0).dataset.latitude;
                 longitude = $("#selectCity option:selected").get(0).dataset.longitude;
+                var city = $("#selectCity option:selected").val();
                 var geoPosition =  {
                     location: {
                         lng: longitude,
-                        lat: latitude
+                        lat: latitude,
+                        cty:city
                     }
                 };
                 geoPosition = JSON.stringify(geoPosition);

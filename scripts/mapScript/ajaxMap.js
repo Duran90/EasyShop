@@ -23,5 +23,10 @@ function initMap() {
     });
     infoWindow.open(map, marker);
 
+    marker = new google.maps.Marker({
+        position:new google.maps.LatLng({lat: 31.4324, lng: 34.5325}),
+        map: map
+    })
+
 
 }
