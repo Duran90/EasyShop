@@ -7,9 +7,8 @@
 }
 
 #left-part-of-cart {
-    min-height: 1px;
     background-color: #e84c3d;
-    height: 100%;
+   height: 90vh;
 }
 
 #right-part-of-cart {

@@ -79,7 +79,7 @@ $(document).ready(function () {
                 lng: longitude,
                 lat: latitude
             },
-            radius: 100.0,
+            radius: 10000.0,
             items
         };
         console.log(requestJson);
