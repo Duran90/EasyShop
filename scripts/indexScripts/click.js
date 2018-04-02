@@ -1,6 +1,6 @@
 var requestJson;
 $(document).ready(function () {
-    console.log(latitude+" "+longitude)
+    console.log(latitude+" "+longitude);
 
     $("#addItemInListBtn").click(function () {
         let item = $("#inputItemInList").val();
@@ -87,6 +87,7 @@ $(document).ready(function () {
         sessionStorage.setItem("request", requestJson);
 
     });
+
 
 
 });

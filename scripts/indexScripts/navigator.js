@@ -1,12 +1,33 @@
 var latitude;
 var longitude;
+var docity;
+var geoPosition;
+$(document).ready(function () {
 
-navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
+    navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
 
+
+});
 
 function coordinates(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
+    $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y&language=en&result_type=administrative_area_level_2")
+        .then(function (response) {
+        docity = response.results[0].address_components[0].long_name;
+        geoPosition= {
+            location: {
+                lng: longitude,
+                lat: latitude,
+                cty: docity
+            }
+        };
+
+            geoPosition = JSON.stringify(geoPosition);
+            sessionStorage.setItem("geoData",geoPosition);
+    });
+
+
     initMap();
 
 }
@@ -15,10 +36,24 @@ function errorMessages(error) {
     switch (error.code) {
         //заперт на использование геолокации
         case error.PERMISSION_DENIED:
-            alert("You have refused to provide your location. Our application may not work correctly! Please choose your сity!)");
+            if( sessionStorage.getItem("geoData")==null){
+                alert("You have refused to provide your location. Our application may not work correctly! Please choose your сity!)");
+            }
+            $("#selectCity").change(function () {
+                latitude = $("#selectCity option:selected").get(0).dataset.latitude;
+                longitude = $("#selectCity option:selected").get(0).dataset.longitude;
+                var city = $("#selectCity option:selected").val();
+                var geoPosition =  {
+                    location: {
+                        lng: longitude,
+                        lat: latitude,
+                        cty:city
+                    }
+                };
+                geoPosition = JSON.stringify(geoPosition);
+                sessionStorage.setItem("geoData",geoPosition);
 
-            latitude = $("#selectCity option:selected").get(0).dataset.latitude;
-            longitude = $("#selectCity option:selected").get(0).dataset.longitude;
+            });
             initMap();
 
             break;
