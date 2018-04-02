@@ -10,8 +10,6 @@
     min-height: 1px;
     background-color: #e84c3d;
     height: 100%;
-
-
 }
 
 #right-part-of-cart {
@@ -21,15 +19,25 @@
 }
 
 #economy{
-    display: inline-block;
     margin-top: 1vw;
-    margin-right: 10px;
+    width: 100%;
 }
 
-table{
-    width: 30%;
+.tableWrap{
+    width: 32%;
+    display: inline-block;
+    padding-top: 0;
+    margin-right: 1%;
 }
 
+.tableBold{
+    font-weight: bold;
+}
+
+.centerTd{
+    text-align: center;
+    width: 20%;
+}
 
 th {
     text-align: center;
@@ -73,6 +81,9 @@ th {
         text-align: center;
         font-size: 4vw;
         color: white;
+    }
+    table{
+        font-size: 1.8vw;
     }
 }
 

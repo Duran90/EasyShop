@@ -8,7 +8,7 @@ function coordinates(position) {
     latitude = position.coords.latitude;
     longitude = position.coords.longitude;
     initMap();
-    initMapCart();
+
 }
 
 function errorMessages(error) {
@@ -20,7 +20,7 @@ function errorMessages(error) {
             latitude = $("#selectCity option:selected").get(0).dataset.latitude;
             longitude = $("#selectCity option:selected").get(0).dataset.longitude;
             initMap();
-            initMapCart();
+
             break;
         //ошибка определения координат(в основнов в неподдерживаемых браузерах)
         case error.POSITION_UNAVAILABLE:

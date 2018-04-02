@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <title>Easy Shop</title>
 
-    <!--Bootstrap & Jquery-->
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script defer src="scripts/cartScripts/cart.js"></script>
+    <script defer src="scripts/cartScripts/switch.js"></script>
     <script defer src="scripts/indexScripts/click.js"></script>
     <script defer src="scripts/indexScripts/ajaxRequestResponse.js"></script>
-    <script defer src="scripts/cartScripts/map.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y"></script>
+    <script src="scripts/cartScripts/map.js"></script>
     <script defer src="scripts/indexScripts/navigator.js"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y">
-    </script>
 
 
-    <!--Style-->
+
+
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index/cssIndex.css">
     <link rel="stylesheet" href="css/headerFooter.css">
     <link rel="stylesheet" href="css/cart/cart.css">
     <link rel="stylesheet" href="css/cart/onnoffswitch.css">
 
-    <!--Semantic-UI-->
-    <link type="text/css" rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
 
 </head>
@@ -72,7 +73,7 @@
 </header>
 
 
-<div class="row">
+<div class="container-fluid row">
     <div id="left-part-of-cart" class="col-lg-2 col-xs-12">
         <p id="start-saving-money-now"><strong>START</strong> SAVING<br>MONEY NOW</p>
 
@@ -88,7 +89,7 @@
     <div id="right-part-of-cart" class="col-lg-10 col-xs-12">
     <div id="economy"></div>
     <div id="optimal"></div>
-    <div id="cartMap" style="background-color: #95989A; height: 100% "></div>
+    <div id="map" style="background-color: #95989A; height: 100%"></div>
     </div>
 </div>
 </div>
