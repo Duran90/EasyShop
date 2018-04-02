@@ -32,7 +32,7 @@ $(document).ready(function () {
                 };
                 geoPosition = JSON.stringify(geoPosition);
                 sessionStorage.setItem("geoData", geoPosition);
-            } else if(nameCity == data.location.cty) {
+            } else if(data !== null && data.location !== null && data.location.cty !== null && nameCity == data.location.cty) {
 
 
                 $("#selectCity").append("<option class='citys' selected value=\'" + nameCity + "\'" +

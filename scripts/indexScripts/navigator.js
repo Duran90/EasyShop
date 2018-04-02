@@ -27,6 +27,7 @@ function coordinates(position) {
             sessionStorage.setItem("geoData",geoPosition);
     });
 
+
     initMap();
     initMapCart();
 }
