@@ -1,10 +1,11 @@
 var latitude;
 var longitude;
-var docity;
+var city;
 var geoPosition;
 $(document).ready(function () {
 
     navigator.geolocation.getCurrentPosition(coordinates, errorMessages);
+    console.log("ENTER Start")
 
 
 });
@@ -14,12 +15,13 @@ function coordinates(position) {
     longitude = position.coords.longitude;
     $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y&language=en&result_type=administrative_area_level_2")
         .then(function (response) {
-        docity = response.results[0].address_components[0].long_name;
+            console.log("ENTER 1");
+        city = response.results[0].address_components[0].long_name;
         geoPosition= {
             location: {
                 lng: longitude,
                 lat: latitude,
-                cty: docity
+                cty: city
             }
         };
 
@@ -29,7 +31,7 @@ function coordinates(position) {
 
 
     initMap();
-
+    initMapCart();
 }
 
 function errorMessages(error) {
@@ -55,7 +57,7 @@ function errorMessages(error) {
 
             });
             initMap();
-
+            initMapCart();
             break;
         //ошибка определения координат(в основнов в неподдерживаемых браузерах)
         case error.POSITION_UNAVAILABLE:

@@ -1,5 +1,4 @@
 $(document).ready(function () {
-    console.log("done");
     var data = JSON.parse(sessionStorage.getItem("geoData"));
     $.ajax({url: "https://olimshelper.herokuapp.com/en/city"}).then(function (response) {
         for (let i = 0; i < response.length; i++) {
