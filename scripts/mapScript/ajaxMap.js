@@ -1,32 +1,60 @@
-function initMap() {
-    var popupContent = '<p class="content">You are here!</p>';
-    var cord1 = JSON.parse(sessionStorage.getItem("geoData"));
+var map;
+var marker;
+var infoWindow;
+var popupContent;
+$(document).ready(function () {
 
-    latitude = +cord1.location.lat;
-    longitude = +cord1.location.lng;
+    $.ajax("https://easyshoptelran.herokuapp.com/user/stores").then(function (response) {
+        console.log("Enter 3")
+        for (var key in response.result) {
+            for (let i = 0; i < response.result[key].length; i++) {
+                marker = new google.maps.Marker({
+                        position: new google.maps.LatLng({
+                            lat: response.result[key][i].lat,
+                            lng: response.result[key][i].lng
+                        }),
+                        map: map
+                    }
+                );
+                let nameStore = key;
+                let addres = response.result[key][i].address
+                popupContent = '<h3 class="content">' + addres + '</h3>'
+                infoWindow = new google.maps.Marker({
+                    content: popupContent
+                });
+
+            }
+
+        }
+
+    });
+
+});
+
+function initMap() {
+    console.log("ENTER 2");
+    popupContent = '<p class="content">You are here!</p>';
+    var position = JSON.parse(sessionStorage.getItem("geoData"));
+
+    latitude = +position.location.lat;
+    longitude = +position.location.lng;
 
     var coord = new google.maps.LatLng({lat: latitude, lng: longitude});
     console.log("lat" + latitude + " " + "lng " + longitude);
 
-    var map = new google.maps.Map(document.getElementById('map'), {
+    map = new google.maps.Map(document.getElementById('map'), {
         center: coord,
         zoom: 15
     });
 
-    var marker = new google.maps.Marker({
+    marker = new google.maps.Marker({
         position: coord,
         map: map,
         draggable: true
     });
-    var infoWindow = new google.maps.InfoWindow({
+    infoWindow = new google.maps.InfoWindow({
         content: popupContent
     });
     infoWindow.open(map, marker);
-
-    marker = new google.maps.Marker({
-        position:new google.maps.LatLng({lat: 31.4324, lng: 34.5325}),
-        map: map
-    })
-
 
 }
