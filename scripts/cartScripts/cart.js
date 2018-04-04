@@ -1,4 +1,10 @@
 $(document).ready(function () {
+
+    if(sessionStorage.getItem("request")==null){
+        $("#map").hide();
+        $("#right-part-of-cart").html("<h1>Your cart is empty</h1>")
+    }
+
     $('#optimal').hide();
     AjaxCart();
     console.log(sessionStorage.getItem("request"));
@@ -59,7 +65,7 @@ function AjaxCart() {
                     $("#economy").html(out);
                 }
 
-                outOptimal += "<div class=\'tableWrap'\>" +
+                outOptimal += "<div class=\'tableWrap'\ style='width: 75%'>" +
                     "<table class=\"table table-striped table-bordered table-hover table-condensed\">" +
                     "<th colspan='3'>" + main_object["result"]["optimal"]["name"] + "</th>" +
                     "<tr class='tableBold'>" + "<td>" + "Item name" + "</td>" +
@@ -68,11 +74,11 @@ function AjaxCart() {
                     "</tr>";
 
 
-                var totalPriceOptimal=0;
+                var totalPriceOptimal = 0;
 
                 for (var key3 in optimalItems) {
                     //проходит по items магазина из поля optimal, вбивает в таблицу все товары, цены и количество
-                    outOptimal+= "<tr>" +
+                    outOptimal += "<tr>" +
                         "<td>" +
                         optimalItems[key3]["name"] +
                         "</td>" +
@@ -91,10 +97,13 @@ function AjaxCart() {
                     "</td>" +
                     "</tr>" +
                     "</table>" +
-                    "</div>";
+                    "</div>" +
+                    "<div>"+
+                    "<a>" +
+                    "<button class =\'my_button'\>" + "Edit cart" +
+                    "</button>" + "</a>"+"</div>";
 
                 $("#optimal").html(outOptimal);
-
 
 
             } else {
