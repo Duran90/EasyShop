@@ -5,7 +5,7 @@ var popupContent;
 $(document).ready(function () {
 
     $.ajax("https://easyshoptelran.herokuapp.com/user/stores").then(function (response) {
-        console.log("Enter 3")
+        console.log("Enter 3");
         for (var key in response.result) {
             for (let i = 0; i < response.result[key].length; i++) {
                 marker = new google.maps.Marker({
@@ -50,7 +50,6 @@ function initMap() {
     marker = new google.maps.Marker({
         position: coord,
         map: map,
-        draggable: true
     });
     infoWindow = new google.maps.InfoWindow({
         content: popupContent

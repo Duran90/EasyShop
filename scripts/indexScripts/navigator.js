@@ -31,7 +31,6 @@ function coordinates(position) {
 
 
     initMap();
-    initMapCart();
 }
 
 function errorMessages(error) {
