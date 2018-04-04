@@ -15,7 +15,7 @@ function coordinates(position) {
     longitude = position.coords.longitude;
     $.ajax("https://maps.googleapis.com/maps/api/geocode/json?latlng="+latitude+","+longitude+"&key=AIzaSyDnFUNDyjDUZmcEM21BT3tteHWDaEVST6Y&language=en&result_type=administrative_area_level_2")
         .then(function (response) {
-            console.log("ENTER 1")
+            console.log("ENTER 1");
         city = response.results[0].address_components[0].long_name;
         geoPosition= {
             location: {
