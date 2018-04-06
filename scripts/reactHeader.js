@@ -3,22 +3,22 @@ class ReactHeader extends React.Component{
     hamburger = () =>{
         return(
         <div className="navbar-header">
-            <!-- Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar) -->
+            {/*Кнопка «Гамбургер» отображается только в мобильном виде (предназначена для открытия основного содержимого Navbar)*/}
             <button type="button" className="navbar-toggle collapsed redBackground whiteText" data-toggle="collapse"
                     data-target="#navbar-main">
                 <span className="icon-bar"/>
                 <span className="icon-bar"/>
                 <span className="icon-bar"/>
             </button>
-            <!-- Бренд или название сайта (отображается в левой части меню) -->
-            <img className="logo" src={"images/indexImg/logo@2x.png"}/>
+             {/*Бренд или название сайта (отображается в левой части меню) */}
+            <a href={"index.html"}><img className="logo" src={"images/indexImg/logo@2x.png"}/></a>
         </div>
     )};
     list = () =>{
         return(
             <div>
-                <ul class="nav navbar-nav">
-                    <!--<li><a href="#">CATALOGUE</a></li>-->
+                <ul className="nav navbar-nav">
+                    {/*<li><a href="#">CATALOGUE</a></li>*/}
                     <li><a href={"cart.html"}>SHOPPING CART</a></li>
                     <li><a href={"map.html"}>STORES LOCATOR</a></li>
                 </ul>
@@ -27,10 +27,10 @@ class ReactHeader extends React.Component{
     };
     city = ()=>{
         return(
-            <div class="navbar-right">
-                <label for="selectCity" class="whiteText">CITY: </label>
-                <select id="selectCity" class="redBackground whiteText">
-                    <option class="citys" value="none">Select City</option>
+            <div className="navbar-right">
+                <label for="selectCity" className="whiteText">CITY: </label>
+                <select id="selectCity" className="redBackground whiteText">
+                    <option className="citys" value="none">Select City</option>
                 </select>
             </div>
         )
@@ -49,10 +49,11 @@ class ReactHeader extends React.Component{
         return(
             <nav className="navbar navbar-default navbar-fixed-top navbar-expand-jg redBackground">
                 <div className="container-fluid">
-
+                    {this.hamburger()}
+                    {this.listAndCity()}
                 </div>
             </nav>
         )
     }
 }
-ReactDOM.render(ReactHeader,header);
+ReactDOM.render(<ReactHeader/>,header);

@@ -18,10 +18,11 @@ $(document).ready(function () {
                 }
             }
             if (nameCity == "Tel Aviv" && sessionStorage.getItem("geoData") == null) {
+                console.log("Ne to");
                 $("#selectCity").append("<option class='citys' selected value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
                     "data-latitude=\'" + latitude + "\' " +
-                    "data-longitude=\'" + longitude + "\'>" + nameCity + "</option>");
+                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">");
                 var geoPosition = {
                     location: {
                         lng: longitude,
@@ -37,18 +38,16 @@ $(document).ready(function () {
                 $("#selectCity").append("<option class='citys' selected value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
                     "data-latitude=\'" + latitude + "\' " +
-                    "data-longitude=\'" + longitude + "\'>" + nameCity + "</option>")
+                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">")
 
             }else {
                 $("#selectCity").append("<option class='citys' value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
                     "data-latitude=\'" + latitude + "\' " +
-                    "data-longitude=\'" + longitude + "\'>" + nameCity + "</option>")
+                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">")
             }
 
         }
-
-
 
     })
 

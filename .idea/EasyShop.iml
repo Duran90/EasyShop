@@ -15,5 +15,7 @@
     <orderEntry type="library" name="react.production" level="application" />
     <orderEntry type="library" name="react.development" level="application" />
     <orderEntry type="library" name="react-dom.development" level="application" />
+    <orderEntry type="library" name="@types/google-maps" level="application" />
+    <orderEntry type="library" name="@types/google-map-react" level="application" />
   </component>
 </module>

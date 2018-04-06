@@ -56,7 +56,6 @@ function errorMessages(error) {
 
             });
             initMap();
-            initMapCart();
             break;
         //ошибка определения координат(в основнов в неподдерживаемых браузерах)
         case error.POSITION_UNAVAILABLE:
