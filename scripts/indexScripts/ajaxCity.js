@@ -19,10 +19,11 @@ $(document).ready(function () {
             }
             if (nameCity == "Tel Aviv" && sessionStorage.getItem("geoData") == null) {
                 console.log("Ne to");
-                $("#selectCity").append("<option class='citys' selected value=\'" + nameCity + "\'" +
+                var $elem = $("#header").find('#selectCity');
+                $elem.append("<option class='citys' selected value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
                     "data-latitude=\'" + latitude + "\' " +
-                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">");
+                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">" + nameCity +"</option>");
                 var geoPosition = {
                     location: {
                         lng: longitude,
@@ -35,16 +36,18 @@ $(document).ready(function () {
             } else if(data !== null && data.location !== null && data.location.cty !== null && nameCity == data.location.cty) {
 
 
-                $("#selectCity").append("<option class='citys' selected value=\'" + nameCity + "\'" +
+                var $elem = $("#header").find('#selectCity');
+                $elem.append("<option class='citys' selected value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
                     "data-latitude=\'" + latitude + "\' " +
-                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">")
+                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">"+ nameCity +"</option>")
 
             }else {
-                $("#selectCity").append("<option class='citys' value=\'" + nameCity + "\'" +
+                var $elem = $("#header").find('#selectCity');
+                $elem.append("<option class='citys' value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
                     "data-latitude=\'" + latitude + "\' " +
-                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">")
+                    "data-longitude=\'" + longitude + "\'/" + nameCity + ">"+ nameCity +"</option>")
             }
 
         }

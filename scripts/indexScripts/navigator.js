@@ -27,10 +27,10 @@ function coordinates(position) {
 
             geoPosition = JSON.stringify(geoPosition);
             sessionStorage.setItem("geoData",geoPosition);
+            initMap();
     });
 
 
-    initMap();
 }
 
 function errorMessages(error) {
