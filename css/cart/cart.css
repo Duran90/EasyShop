@@ -1,34 +1,46 @@
-.row {
+#mainDiv {
     margin-top: 50px;
-    min-height: 80%;
-    height: 1px;
-    overflow: auto;
+    display: table;
+
 
 }
 
 #left-part-of-cart {
+
     background-color: #e84c3d;
-   height: 90vh;
+    height: 110vh;
+    vertical-align: middle;
+
 }
 
 #right-part-of-cart {
+    display: table-cell;
     min-height: 1px;
     height: 100%;
+    text-align: center;
+    min-width: 80%;
 
 }
 
 #economy, #optimal {
     margin-top: 1vw;
-    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 90%;
+    text-align: center;
 }
 
-#right-part-of-cart .col-lg-10 .col-xs-12{
-    margin: 0;
-    padding: 0;
+#right-part-of-cart .col-lg-10 .col-xs-12 {
+
 }
 
-.tableWrap{
-    width: 32%;
+#map{
+    min-width: 80%;
+    min-height: 50vh;
+}
+
+.tableWrap {
+    width: 31%;
     display: inline-block;
     padding-top: 0;
     margin-right: 1%;
@@ -36,11 +48,11 @@
 
 }
 
-.tableBold{
+.tableBold {
     font-weight: bold;
 }
 
-.centerTd{
+.centerTd {
     text-align: center;
     width: 20%;
 }
@@ -51,7 +63,7 @@ th {
     font-weight: 800;
 }
 
-.totalPriceRow{
+.totalPriceRow {
     text-align: center;
     font-size: 1.3em;
     font-weight: 600;
@@ -59,7 +71,7 @@ th {
 }
 
 #start-saving-money-now {
-    margin: 3.5em 0 0 0;
+    margin: 10em 0 0 0;
     text-align: center;
     font-size: 2em;
     color: white;
@@ -77,27 +89,50 @@ th {
     text-align: center;
 }
 
+.my_button {
+    color: #ffffff;
+    font-size: 16px;
+    background: #e84c3d;
+    text-hover: #ffffff;
+    padding: 6px 22px 6px 22px;
+    text-decoration: none;
+}
+
+.my_button:hover {
+    color: #ffffff;
+    background: #e84c3d;
+    background-image: -webkit-linear-gradient(top, #e84c3d, #e84c3d);
+    background-image: -moz-linear-gradient(top, #e84c3d, #e84c3d);
+    background-image: -ms-linear-gradient(top, #e84c3d, #e84c3d);
+    background-image: -o-linear-gradient(top, #e84c3d, #e84c3d);
+    background-image: linear-gradient(to bottom, #e84c3d, #e84c3d);
+    text-decoration: none;
+}
+
 @media screen and (max-width: 767px) {
-    #left-part-of-cart{
+    #left-part-of-cart {
         height: 100px;
         min-height: 22vw;
     }
+
     #start-saving-money-now {
         margin: 0.5em 0 0 0;
         text-align: center;
         font-size: 4vw;
         color: white;
     }
-    table{
+
+    table {
         font-size: 1.8vw;
     }
 }
 
 @media screen and (max-width: 1200px) {
-    #left-part-of-cart{
+    #left-part-of-cart {
         height: 100px;
         min-height: 22vw;
     }
+
     #start-saving-money-now {
         margin: 0.5em 0 0 0;
         text-align: center;
