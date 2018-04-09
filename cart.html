@@ -17,9 +17,6 @@
     <script defer src="scripts/indexScripts/navigator.js"></script>
 
 
-
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index/cssIndex.css">
     <link rel="stylesheet" href="css/headerFooter.css">
@@ -27,7 +24,8 @@
     <link rel="stylesheet" href="css/cart/onnoffswitch.css">
 
 
-    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
+    <link type="text/css" rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.0/semantic.min.js"></script>
 
 </head>
@@ -81,8 +79,8 @@
 
 <div class="container row" id="mainDiv">
     <div id="left-part-of-cart" class="col-lg-2 col-xs-12">
+        <div id="textAndSwitch">
         <p id="start-saving-money-now"><strong>START</strong> SAVING<br>MONEY NOW</p>
-
         <div class="onoffswitch">
             <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
             <label class="onoffswitch-label" for="myonoffswitch">
@@ -90,12 +88,24 @@
                 <span class="onoffswitch-switch"></span>
             </label>
         </div>
+        </div>
+        <div id="total">
+            <div id="totalEconomy"></div>
+            <div id="totalOptimal"></div>
 
+        </div>
+        <div id="yourEconomy"></div>
+        <div id="yourEconomyOpacity"></div>
     </div>
+
     <div id="right-part-of-cart" class="col-lg-10 col-xs-12">
-    <div id="economy" class="col-lg-12"></div>
-    <div id="optimal" class="col-lg-12"></div>
-    <div id="map" class="container" style="background-color: #95989A; height: 100%"></div>
+
+        <div id="economy" class="col-xs-12"></div>
+        <div id="optimal" class="col-xs-12"></div>
+
+        <div id="map" class="col-xs-12"></div>
+        <br>
+
     </div>
 </div>
 </div>

@@ -1,11 +1,18 @@
 $(document).ready(function () {
-
-    if(sessionStorage.getItem("request")==null){
+    if (sessionStorage.getItem("request") == null) {
+        $('#left-part-of-cart').html("<br>");
         $("#map").hide();
-        $("#right-part-of-cart").html("<h1>Your cart is empty</h1>")
+        $("#right-part-of-cart").html("<img src='images/cart/cartIsEmpty.jpg'" +
+            " style='width: 20vw; margin-top: 8%'><p style='margin: 0 0 2vw 0; font-size: 2vw'>Your cart is empty</p>"+
+            "<a href=\'index.html'\ >" +
+            "<button class=\"btn btn-default redBackground whiteText\" style='margin-bottom: 5vw'>" + "Add items to the cart" +
+            "</button>" +
+            "</a>")
     }
 
     $('#optimal').hide();
+    $('#totalOptimal').hide();
+    $('#yourEconomyOpacity').hide();
     AjaxCart();
     console.log(sessionStorage.getItem("request"));
 });
@@ -26,11 +33,13 @@ function AjaxCart() {
                 var optimalItems = main_object["result"]["optimal"]["items"];
                 var out = "";
                 var outOptimal = "";
+                var totalAllTables = 0;
 
                 for (var key in stores) {
                     //проходит по всем магазинам (по айди), создает таблицу и вбивает название магазина в шапку таблицы
                     var tablesCounter = 0;
                     var totalPrice = 0;
+
                     out += "<div class=\'tableWrap'\>" +
                         "<table class=\"table table-striped table-bordered table-hover table-condensed\">" +
                         "<th colspan='3'>" + stores[key]["name"] + "</th>" +
@@ -62,10 +71,18 @@ function AjaxCart() {
                         "</table>" +
                         "</div>";
 
-                    $("#economy").html(out);
+                    totalAllTables+= totalPrice;
                 }
 
-                outOptimal += "<div class=\'tableWrap'\ style='width: 75%'>" +
+                out += "<div>" + "<a href=\'index.html'\>" +
+                    "<button class=\"btn btn-default redBackground whiteText\">" + "Edit cart" +
+                    "</button>" +
+                    "</a>" +
+                    "</div>";
+
+                $("#economy").html(out);
+
+                outOptimal += "<div class=\'tableWrap'\ style='width: 60%'>" +
                     "<table class=\"table table-striped table-bordered table-hover table-condensed\">" +
                     "<th colspan='3'>" + main_object["result"]["optimal"]["name"] + "</th>" +
                     "<tr class='tableBold'>" + "<td>" + "Item name" + "</td>" +
@@ -98,12 +115,25 @@ function AjaxCart() {
                     "</tr>" +
                     "</table>" +
                     "</div>" +
-                    "<div>"+
-                    "<a>" +
-                    "<button class =\'my_button'\>" + "Edit cart" +
-                    "</button>" + "</a>"+"</div>";
+                    "<div>" +
+                    "<a href=\'index.html'\>" +
+                    "<button class=\"btn btn-default redBackground whiteText\">" + "Edit cart" +
+                    "</button>" +
+                    "</a>" +
+                    "</div>";
 
                 $("#optimal").html(outOptimal);
+
+
+                //заполнение total и yourEconomy в leftPart
+
+
+
+                $("#totalEconomy").html("<h4 style=\'margin: 0'\>TOTAL:</h4><br>" + "<h1 style='margin: 0'>₪" +totalAllTables.toFixed(1) + "</h1>");
+                $("#totalOptimal").html("<h4 style='margin: 0'>TOTAL:</h4><br>" + "<h1 style='margin: 0'>₪" +totalPriceOptimal.toFixed(1) + "</h1>");
+
+                $("#yourEconomy").html("<h4 style='margin: 0'>YOUR ECONOMY:</h4><br>" + "<h1 style='margin: 0'>₪" +(totalPriceOptimal-totalAllTables).toFixed(1) + "</h1>");
+                $("#yourEconomyOpacity").html("<h4 style='margin: 0'>YOUR POTENTIAL ECONOMY:</h4><br>" + "<h1 style='margin: 0'>₪" +(totalPriceOptimal-totalAllTables).toFixed(1) + "</h1>");
 
 
             } else {
