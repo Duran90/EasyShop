@@ -2,6 +2,7 @@ var map;
 var marker;
 var infoWindow;
 var popupContent;
+var coord;
 $(document).ready(function () {
 
     initMap()
@@ -17,7 +18,7 @@ function initMap() {
     latitude = +position.location.lat;
     longitude = +position.location.lng;
 
-    var coord = new google.maps.LatLng({lat: latitude, lng: longitude});
+    coord = new google.maps.LatLng({lat: latitude, lng: longitude});
     console.log(coord);
     console.log("lat" + latitude + " " + "lng " + longitude);
 
@@ -25,19 +26,14 @@ function initMap() {
         center: coord,
         zoom: 15
     });
+    console.log(coord);
 
-    marker = new google.maps.Marker({
-        position: coord,
-        map: map,
-    });
-    infoWindow = new google.maps.InfoWindow({
-        content: popupContent
-    });
-    infoWindow.open(map, marker);
+
 
   markerShop();
 }
 function markerShop() {
+
     $.ajax("https://easyshoptelran.herokuapp.com/user/stores").then(function (response) {
         console.log("Enter 3");
         for (var key in response.result) {
@@ -65,6 +61,15 @@ function markerShop() {
         }
 
     });
+    marker = new google.maps.Marker({
+        position: coord,
+        map: map,
+    });
+    infoWindow = new google.maps.InfoWindow({
+        content: popupContent
+    });
+    infoWindow.open(map, marker);
+    map.setCenter()
 
 
 }
