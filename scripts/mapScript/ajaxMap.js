@@ -28,9 +28,8 @@ function initMap() {
     });
     console.log(coord);
 
-
-
   markerShop();
+
 }
 function markerShop() {
 
@@ -69,7 +68,5 @@ function markerShop() {
         content: popupContent
     });
     infoWindow.open(map, marker);
-    map.setCenter()
-
 
 }

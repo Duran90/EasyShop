@@ -12,7 +12,9 @@ $(document).ready(function () {
                         $("#searchResponse").children().remove();
                         var res = response[key];
                         for (var item in res) {
-                            $("#searchResponse").append("<option value=\'" + res[item] + "\'>" + item + "</option>");
+                            var test = $("<option></option>").text(item).attr("value",res[item]);
+                            console.log(test);
+                            $("#searchResponse").append(test);
                             keyItem = res[item];
                             index[keyItem] = item;
                         }

@@ -16,7 +16,7 @@ $(document).ready(function () {
             });
             $("#productList").append('<li class="itemList" data-barcode = \"' + barcode + '\" data-amount = \"' + amount + '\" data-value=\"' + name + '\">' + name +
                 '<span>' + amount + '</span>' + ' qty' +
-                '<sup><button class="btn-remove redBackground whiteText" type="button" value="remove">X</button></sup></li>'
+                '<sup><span id = "delItem">X</span></sup></li>'
             );
         })
         if ($("#productList").children().length > 0) {
