@@ -66,6 +66,9 @@ a:visited { text-decoration: none; }
 .navbar-right{
     margin-right: 1em;
 }
+#selectCity, #selectCity:hover, #selectCity:focus, #selectCity:active{
+    border: none;
+}
 
 .btn{
     border: 1px solid white;

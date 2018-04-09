@@ -12,10 +12,5 @@ function initMap() {
         draggable:true,
 
     });
-    var marker =new google.maps.Marker({
-        position: "EjHXkNeR15Ag15DXl9eZ157XkNeZ16ggNSwg15DXqden15zXldefLCDXmdep16jXkNec",
-        map: map,
-        draggable:true,
-    })
 
 }
