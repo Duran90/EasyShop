@@ -67,6 +67,14 @@ h2 {
     padding: 0;
     float: right;
 }
+#delItem{
+    color: #e84c3d;
+}
+#delItem:focus{}
+#delItem:hover{
+    color: black;
+    cursor: pointer;
+}
 #addItemInListBtn{
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;

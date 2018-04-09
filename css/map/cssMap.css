@@ -26,6 +26,19 @@
     color: black;
     margin: 0;
 }
+.checkShop{
+    width: 100%;
+    margin-top: 0.7em;
+
+}
+.checkShop input{
+    float: right;
+    background-color: #e84c3d;
+
+}
+#mapFilters{
+    margin:1.5em;
+}
 
 
 

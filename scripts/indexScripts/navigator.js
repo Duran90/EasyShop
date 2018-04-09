@@ -27,7 +27,7 @@ function coordinates(position) {
 
             geoPosition = JSON.stringify(geoPosition);
             sessionStorage.setItem("geoData",geoPosition);
-            initMap();
+
     });
 
 
@@ -55,7 +55,7 @@ function errorMessages(error) {
                 sessionStorage.setItem("geoData",geoPosition);
 
             });
-            initMap();
+
             break;
         //ошибка определения координат(в основнов в неподдерживаемых браузерах)
         case error.POSITION_UNAVAILABLE:
