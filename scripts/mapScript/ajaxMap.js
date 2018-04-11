@@ -12,24 +12,21 @@ function initMap() {
     console.log("ENTER 2");
     popupContent = '<p class="content">You are here!</p>';
     var position = JSON.parse(sessionStorage.getItem("geoData"));
-    if(position == null ){
-        console.log("csddsa")
-    }
+
     latitude = +position.location.lat;
     longitude = +position.location.lng;
 
     coord = new google.maps.LatLng({lat: latitude, lng: longitude});
     console.log(coord);
-    console.log("lat" + latitude + " " + "lng " + longitude);
 
     map = new google.maps.Map(document.getElementById('map'), {
         center: coord,
-        zoom: 15
+        zoom: 10
     });
     console.log(coord);
 
   markerShop();
-
+    positionMarker();
 }
 function markerShop() {
 
@@ -60,6 +57,8 @@ function markerShop() {
         }
 
     });
+}
+function positionMarker() {
     marker = new google.maps.Marker({
         position: coord,
         map: map,
@@ -68,5 +67,6 @@ function markerShop() {
         content: popupContent
     });
     infoWindow.open(map, marker);
+    marker.focus();
 
 }
