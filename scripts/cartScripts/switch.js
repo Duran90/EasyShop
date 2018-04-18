@@ -8,6 +8,9 @@ $('#myonoffswitch').change(function () {
         $('#totalEconomy').show();
         $('#yourEconomyOpacity').hide();
         $('#yourEconomy').show();
+        //map
+        $('#mapOptimal').hide();
+        $('#mapEconomy').show();
     } else {
         $('#economy').hide();
         $('#optimal').show();
@@ -15,6 +18,8 @@ $('#myonoffswitch').change(function () {
         $('#totalOptimal').show();
         $('#yourEconomy').hide();
         $('#yourEconomyOpacity').show();
+        $('#mapEconomy').hide();
+        $('#mapOptimal').show();
     }
 
 });
