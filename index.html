@@ -9,13 +9,13 @@
 
     <!--Bootstrap & Jquery-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/indexScripts/navigator.js"></script>
     <script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script defer src="owlcarousel/owl.carousel.min.js"></script>
     <script defer src="scripts/indexScripts/owlCar.js"></script>
     <script defer src="scripts/indexScripts/click.js"></script>
     <script defer src="scripts/indexScripts/ajaxRequestResponse.js"></script>
-    <script defer src="scripts/indexScripts/navigator.js"></script>
     <script defer src="scripts/indexScripts/ajaxCity.js"></script>
     <script defer src="scripts/indexScripts/sessionStorage.js"></script>
     <!--react-->
@@ -44,15 +44,15 @@
     </div>
 </section>
 
-<div id="sharesCarousel" class="owl-carousel owl-theme" style="margin-top: 1em">
-    <a class="item" href="#"><img src="images/indexImg/01.jpg"></a>
-    <a class="item" href="#"><img src="images/indexImg/02.jpg"></a>
-    <a class="item" href="#"><img src="images/indexImg/03.jpg"></a>
-    <a class="item" href="#"><img src="images/indexImg/04.jpg"></a>
-    <a class="item" href="#"><img src="images/indexImg/05.jpg"></a>
-    <a class="item" href="#"><img src="images/indexImg/06.jpg"></a>
-    <a class="item" href="#"><img src="images/indexImg/07.jpg"></a>
-</div>
+<!--<div id="sharesCarousel" class="owl-carousel owl-theme" style="margin-top: 1em">-->
+    <!--<a class="item" href="#"><img src="images/indexImg/01.jpg"></a>-->
+    <!--<a class="item" href="#"><img src="images/indexImg/02.jpg"></a>-->
+    <!--<a class="item" href="#"><img src="images/indexImg/03.jpg"></a>-->
+    <!--<a class="item" href="#"><img src="images/indexImg/04.jpg"></a>-->
+    <!--<a class="item" href="#"><img src="images/indexImg/05.jpg"></a>-->
+    <!--<a class="item" href="#"><img src="images/indexImg/06.jpg"></a>-->
+    <!--<a class="item" href="#"><img src="images/indexImg/07.jpg"></a>-->
+<!--</div>-->
 <!--TODO list-->
 <div class="container-fluid row list">
     <div class="listInfo col-xs-4 col-md-3 text-left whiteText redBackground">
@@ -63,7 +63,7 @@
             <form method="get" action="#" role="search">
                 <div class="input-group">
                     <input id="inputItemInList" type="text" list="searchResponse" class="form-control"
-                           placeholder="Enter name of goods">
+                           placeholder="Enter name of goods" autocomplete="off">
 
                     <input id="inputItemAmount" class="form-control" type="number" autocomplete="off" min="1"
                            placeholder="Enter amount">

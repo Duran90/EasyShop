@@ -18,7 +18,7 @@ $(document).ready(function () {
                 }
             }
             if (nameCity == "Tel Aviv" && sessionStorage.getItem("geoData") == null) {
-                console.log("Ne to");
+
                 var $elem = $("#header").find('#selectCity');
                 $elem.append("<option class='citys' selected value=\'" + nameCity + "\'" +
                     " data-placeId=\'" + placeId + "\' " +
@@ -52,7 +52,7 @@ $(document).ready(function () {
 
         }
 
-    })
+    });
 
 
 });

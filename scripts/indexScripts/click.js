@@ -32,7 +32,7 @@ $(document).ready(function () {
 
                 $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
                     '<span>' + amount + '</span>' + ' qty' +
-                    '<sup><p id = "delItem">X</p></sup></li>');
+                    '<sup><span id = "delItem">X</span></sup></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
