@@ -15,10 +15,9 @@ $(document).ready(function () {
                 }
             });
             $("#productList").append('<li class="itemList" data-barcode = \"' + barcode + '\" data-amount = \"' + amount + '\" data-value=\"' + name + '\">' + name +
-                '<span>' + amount + '</span>' + ' qty' +
-                '<span id = "delItem">X</span></li>'
+                '<span>' + amount + '</span><span id = "delItem">X</span></li>'
             );
-        })
+        });
         if ($("#productList").children().length > 0) {
             $("#doneItemListBtn,#createItemListBtn").show();
         }

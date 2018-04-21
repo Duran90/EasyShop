@@ -14,9 +14,8 @@ $(document).ready(function () {
                 }
             }
             if ($(".itemList").length == 0) {
-                $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
-                    '<span>' + amount + '</span>' + ' qty' +
-                    '<span id = "delItem">X</span></li>');
+                $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\"><span>' + item +
+                    '<span>' + amount + '</span><span id = "delItem">X</span></span></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
@@ -30,8 +29,7 @@ $(document).ready(function () {
                 }
 
                 $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
-                    '<span>' + amount + '</span>' + ' qty' +
-                    '<span id = "delItem">X</span></li>');
+                    '<span>' + amount + '</span><span id = "delItem">X</span></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
@@ -78,7 +76,7 @@ $(document).ready(function () {
                 lng: longitude,
                 lat: latitude
             },
-            radius: 50.0,
+            radius: 10.0,
             items
         };
         console.log(requestJson);
