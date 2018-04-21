@@ -1,14 +1,19 @@
 
+body, html{
+    font-family: 'Montserrat', sans-serif;
+}
 #mainDiv {
     min-height: 90%;
     margin-top: 50px;
     width: 100%;
     display: flex;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #left-part-of-cart {
     background-color: #e84c3d;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #totalEconomy, #totalOptimal, #yourEconomy {
@@ -17,6 +22,7 @@
     text-align: center;
     margin-bottom: 5vh;
     line-height: 0.5em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #yourEconomyOpacity{
@@ -24,10 +30,13 @@
     text-align: center;
     margin-bottom: 5vh;
     line-height: 0.5em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #right-part-of-cart {
         text-align: center;
+    font-family: 'Montserrat', sans-serif;
+
 
 }
 
@@ -35,11 +44,14 @@
     margin-top: 1vw;
     text-align: center;
     margin-bottom: 1.5em;
+    font-family: 'Montserrat', sans-serif;
+
 }
 
 #mapEconomy, #mapOptimal {
     height: 50vh;
     margin-bottom: 1vw;
+
 }
 
 .tableWrap {
@@ -47,29 +59,34 @@
     display: inline-block;
     margin-right: 5px;
     vertical-align: top;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*заголовки Items, Amount, Price*/
 .tableBold {
     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /*выборочное центрирование в столбцах*/
 .centerTd {
     text-align: center;
     width: 20%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 th {
     text-align: center;
     font-size: 1.8em;
     font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .totalPriceRow {
     text-align: center;
     font-size: 1.3em;
     font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
 }
 
 #start-saving-money-now {
@@ -77,13 +94,28 @@ th {
     text-align: center;
     font-size: 2em;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .onoffswitch {
     margin: 0 auto 7vh auto;
+    font-family: 'Montserrat', sans-serif;
 }
 
+h1, h4{
+    font-family: 'Montserrat', sans-serif; !important;
+}
 
+h1:first-child, h2:first-child, h3:first-child, h4:first-child, h5:first-child{
+    font-family: 'Montserrat', sans-serif; !important;
+}
+
+h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child{
+    font-family: 'Montserrat', sans-serif; !important;
+}
+label{
+    font-family: 'Montserrat', sans-serif; !important;
+}
 
 @media screen and (max-width: 1200px) {
     #mainDiv{
@@ -115,6 +147,7 @@ th {
     }
     #totalEconomy h1 , #totalOptimal h1, #yourEconomy h1, #yourEconomyOpacity h1 {
         font-size: 2.5vw;
+        font-family: 'Montserrat', sans-serif;
     }
     #totalEconomy h4 , #totalOptimal h4, #yourEconomy h4, #yourEconomyOpacity h4 {
         font-size: 2vw;

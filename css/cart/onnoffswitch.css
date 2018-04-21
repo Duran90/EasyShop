@@ -22,12 +22,14 @@
     content: "ECONOMY";
     padding-left: 21px;
     background-color: #FFFFFF; color: #E84C3D;
+    font-family: 'Montserrat', sans-serif;
 }
 .onoffswitch-inner:after {
     content: "OPTIMAL";
     padding-right: 21px;
     background-color: #FFFFFF; color: #E84C3D;
     text-align: right;
+    font-family: 'Montserrat', sans-serif;
 }
 .onoffswitch-switch {
     display: block; width: 25px; margin: 5px;

@@ -14,8 +14,8 @@ $(document).ready(function () {
                 }
             }
             if ($(".itemList").length == 0) {
-                $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\"><span>' + item +
-                    '<span>' + amount + '</span><span id = "delItem">X</span></span></li>');
+                $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
+                    '<span class="badge">' + amount + '</span><span class = "delItem">X</span></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
@@ -29,7 +29,7 @@ $(document).ready(function () {
                 }
 
                 $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
-                    '<span>' + amount + '</span><span id = "delItem">X</span></li>');
+                    '<span class="badge">' + amount + '</span><span class = "delItem">X</span></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
@@ -41,7 +41,7 @@ $(document).ready(function () {
             $("#doneItemListBtn,#createItemListBtn").show();
         }
 
-        $("#delItem").click(function () {
+        $(".delItem").click(function () {
             $(this).parents(".itemList").remove();
             if ($("#productList").children().length <= 0) {
                 $("#doneItemListBtn,#createItemListBtn").hide();

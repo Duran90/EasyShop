@@ -1,3 +1,20 @@
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+#footer-right{
+    text-align: right;
+}
+
+#footer-center{
+    text-align: center;
+}
+
+#footer-left{
+    margin-top: 0.5em;
+    text-align: left;
+}
+
 @media (max-width: 998px) {
     .navbar-header {
         float: none;
@@ -53,6 +70,7 @@
 }
 a:visited { text-decoration: none; }
 .navbar-default .navbar-nav>li>a, footer a,#categoriesCarousel a{ /*redefinition bootstap*/
+    font-family: 'Montserrat', sans-serif; !important;
     color:#fff;
     border-bottom: 3px solid #e84c3d;
     padding-bottom: 10px;
@@ -72,6 +90,7 @@ a:visited { text-decoration: none; }
 
 .btn{
     border: 1px solid white;
+    font-family: 'Montserrat', sans-serif;
 
 }
 .navbar-default .container-fluid{
@@ -92,8 +111,9 @@ footer div{
 }
 footer p{
     margin: 0;
-    padding-left: 1em;
+
 }
 #selectCity{
+    font-family: 'Montserrat', sans-serif; !important;
     margin-top: 1em;
 }

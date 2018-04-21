@@ -14,8 +14,8 @@ $(document).ready(function () {
                     name = val;
                 }
             });
-            $("#productList").append('<li class="itemList" data-barcode = \"' + barcode + '\" data-amount = \"' + amount + '\" data-value=\"' + name + '\">' + name +
-                '<span>' + amount + '</span><span id = "delItem">X</span></li>'
+            $("#productList").append('<li class="itemList" data-barcode = \"' + barcode + '\" data-amount = \"' + amount + '\" data-value=\"' + name + '\"><span>' + name +
+                '<span>' + amount + '</span><span class = "delItem">X</span></span></li>'
             );
         });
         if ($("#productList").children().length > 0) {
