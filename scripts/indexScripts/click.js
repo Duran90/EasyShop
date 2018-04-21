@@ -1,6 +1,5 @@
 var requestJson;
 $(document).ready(function () {
-    console.log(latitude+" "+longitude);
 
     $("#addItemInListBtn").click(function () {
         let item = $("#inputItemInList").val();
@@ -17,7 +16,7 @@ $(document).ready(function () {
             if ($(".itemList").length == 0) {
                 $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
                     '<span>' + amount + '</span>' + ' qty' +
-                    '<sup><span id = "delItem">X</span></sup></li>');
+                    '<span id = "delItem">X</span></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
@@ -32,7 +31,7 @@ $(document).ready(function () {
 
                 $("#productList").append('<li class="itemList" data-barcode = \"' + code + '\" data-amount = \"' + amount + '\" data-value=\"' + item + '\">' + item +
                     '<span>' + amount + '</span>' + ' qty' +
-                    '<sup><span id = "delItem">X</span></sup></li>');
+                    '<span id = "delItem">X</span></li>');
                 $("#inputItemInList").val('');
                 $("#inputItemAmount").val('');
             }
@@ -79,7 +78,7 @@ $(document).ready(function () {
                 lng: longitude,
                 lat: latitude
             },
-            radius: 10.0,
+            radius: 50.0,
             items
         };
         console.log(requestJson);

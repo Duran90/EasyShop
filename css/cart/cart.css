@@ -1,5 +1,6 @@
 
 #mainDiv {
+    min-height: 90%;
     margin-top: 50px;
     width: 100%;
     display: flex;

@@ -145,61 +145,82 @@ function AjaxCart() {
                         var myGeo = JSON.parse(sessionStorage.getItem('geoData'));
                         var myLat = myGeo.location.lat;
                         var myLng = myGeo.location.lng;
+                        var myPosition = {lat: myLat, lng: myLng};
 
                         // MAP economy
 
                         var economyMap = new google.maps.Map(document.getElementById('mapEconomy'), {
-                            zoom: 15,
-                            center: {lat: myLat, lng: myLng}
-
+                            zoom: 13,
+                            center: myPosition
                         });
 
-                        // var markerMyLocationEconomy = new google.maps.Marker;
+                        var markerMyLocationEconomy = new google.maps.Marker({
+                            position: myPosition,
+                            map: economyMap
+                        });
 
-                        var economyStoresLocations = {};
-                        var counterEconomyStores = 0;
-
+                        var economyLocations = [];
+                        var iCounter = 0;
                         for (var key in stores) {
-                            economyStoresLocations[counterEconomyStores] = {
-                                lat: stores[key]["lat"],
-                                lng: stores[key]["lng"]
-                            };
-                            counterEconomyStores++
+                            var currentStoreString = JSON.stringify(Object.values(stores[key]));
+                            economyLocations[iCounter] = JSON.parse(currentStoreString);
+                            iCounter++
                         }
-                        console.log(economyStoresLocations);
+                        console.log(economyLocations);
+
+                        console.log(economyLocations[0][0]);
+                        console.log(economyLocations[0][1]);
+                        console.log(economyLocations[0][2]);
+                        console.log(economyLocations[0][3]);
+                        console.log(economyLocations[0][4]);
+
+                        // var markerEconomy = new google.maps.Marker({
+                        //     position: {lat:economyLocations[0][4], lng:economyLocations[0][3]},
+                        //     map: economyMap
+                        // });
 
 
-                        for (var i = 0; i < economyStoresLocations.length; i++) {
-                            var location = economyStoresLocations[i];
-                            var marker = new google.maps.Marker({
-                                position: {lat: location.lat, lng: location.lng},
-                                map: economyMap
-                            })
+
+                        var infoWindow = new google.maps.InfoWindow();
+                        var markerEcoStores, i;
+
+                        for (i = 0; i < economyLocations.length; i++) {
+                            markerEcoStores = new google.maps.Marker({
+                                position: new google.maps.LatLng(economyLocations[i][4], economyLocations[i][3]),
+                                map: economyMap,
+                                icon: 'images/cart/storeIcon.png'
+                            });
+                            google.maps.event.addListener(markerEcoStores, 'click', (function(markerEcoStores, i) {
+                                return function() {
+                                    infoWindow.setContent(economyLocations[i][0]);
+                                    infoWindow.open(economyMap, markerEcoStores);
+                                }
+                            })(markerEcoStores, i));
                         }
+
+
+
 
 
                         // MAP optimal
 
                         var optimalMap = new google.maps.Map(document.getElementById('mapOptimal'), {
-                            zoom: 15,
-                            center: {lat: myLat, lng: myLng}
+                            zoom: 13,
+                            center: myPosition
 
                         });
                         var markerMyLocationOptimal = new google.maps.Marker({
                             position: {lat: myLat, lng: myLng},
-                            map: optimalMap,
-                            icon: {
-                                url: 'https://developers.google.com/maps/documentation/javascript/images/circle.png',
-                                anchor: new google.maps.Point(10, 10),
-                                scaledSize: new google.maps.Size(10, 17)
-                            }
-
+                            map: optimalMap
                         });
 
                         var markerOptimalStore = new google.maps.Marker({
-                            position: {lat: main_object.result.optimal.lat, lng: main_object.result.optimal.lng},
+                            position: {
+                                lat: main_object.result.optimal.lat,
+                                lng: main_object.result.optimal.lng
+                            },
                             map: optimalMap,
-
+                            icon: 'images/cart/storeIcon.png'
                         })
 
                         // end MAP

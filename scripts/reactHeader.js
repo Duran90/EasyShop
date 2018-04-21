@@ -20,7 +20,7 @@ class ReactHeader extends React.Component{
                 <ul className="nav navbar-nav">
                     {/*<li><a href="#">CATALOGUE</a></li>*/}
                     <li><a href={"cart.html"}>SHOPPING CART</a></li>
-                    <li><a href={"map.html"}>STORES LOCATOR</a></li>
+                    {/*<li><a href={"map.html"}>STORES LOCATOR</a></li>*/}
                 </ul>
             </div>
         )

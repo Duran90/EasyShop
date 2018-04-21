@@ -1,3 +1,7 @@
+body, html{
+    height:100% !important;
+    min-height: 100vh;
+}
 /*colors*/
 .redBackground {
     background-color: #e84c3d;
@@ -50,8 +54,12 @@ h2 {
     background-color: #e84c3d;
 }
 
-/*List*/
+#main{
+    height: 100%;
+    min-height: 100%;
+}
 .list {
+    min-height: 55%;
     margin-right: 0;
     padding-right: 0;
     position: relative;
