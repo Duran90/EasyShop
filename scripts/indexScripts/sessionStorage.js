@@ -15,14 +15,14 @@ $(document).ready(function () {
                 }
             });
             $("#productList").append('<li class="itemList" data-barcode = \"' + barcode + '\" data-amount = \"' + amount + '\" data-value=\"' + name + '\"><span>' + name +
-                '<span>' + amount + '</span><span class = "delItem">X</span></span></li>'
+                '<span class="badge">' + amount + '</span><span class = "delItem">X</span></span></li>'
             );
         });
         if ($("#productList").children().length > 0) {
             $("#doneItemListBtn,#createItemListBtn").show();
         }
 
-        $(".btn-remove").click(function () {
+        $(".delItem").click(function () {
             $(this).parents(".itemList").remove();
             if ($("#productList").children().length <= 0) {
                 $("#doneItemListBtn,#createItemListBtn").hide();
